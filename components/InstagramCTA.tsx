@@ -46,6 +46,12 @@ export default function InstagramCTA({ onMailOpen }: { onMailOpen: () => void })
               Drop us a mail
             </button>
           </p>
+          <p className="mt-3 mb-0 text-[0.88rem] text-white/75 md:hidden">
+            Want to join?{' '}
+            <a href="https://chat.whatsapp.com/E6EpNtevkj3HSSCc88NfUd" target="_blank" rel="noopener" className="text-white underline underline-offset-2 font-semibold hover:opacity-80 transition-opacity no-underline">
+              Join WhatsApp Community
+            </a>
+          </p>
         </div>
       </section>
 
