@@ -238,7 +238,7 @@ export default function AdminPage() {
 
       <div className="max-w-[1000px] mx-auto px-6 py-10 pb-20">
         <div className="mb-9">
-          <h1 className="font-fraunces text-[2.4rem] font-bold text-blue-dark">Upcoming <em className="italic font-light text-blue-mid">Events</em></h1>
+          <h1 className="font-fraunces text-[2.4rem] font-bold text-blue-dark">Upcoming <em className="italic font-bold text-blue-mid">Events</em></h1>
           <p className="text-[0.9rem] text-[#5a7fa8] mt-1.5">Add, edit, or remove events — changes sync to the website instantly via Supabase.</p>
         </div>
 
