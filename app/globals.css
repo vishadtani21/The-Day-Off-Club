@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors ── */
+  --color-blue:       #2b5f8f;
+  --color-blue-dark:  #1a3f6b;
+  --color-blue-mid:   #3a7abf;
+  --color-blue-light: #c8dff9;
+  --color-blue-hero:  #d0e8fb;
+  --color-off-white:  #f4f8fd;
+  --color-stripe:     #a8ccf0;
+
+  /* ── Fonts (mapped from Next.js CSS variables) ── */
+  --font-fraunces: var(--fraunces-font), serif;
+  --font-inter:    var(--inter-font), 'Inter', sans-serif;
+  --font-raleway:  var(--raleway-font), 'Raleway', sans-serif;
+  --font-dancing:  var(--dancing-font), cursive;
+
+  /* ── Animations ── */
+  --animate-ticker:       ticker 22s linear infinite;
+  --animate-photo-ticker: photoTicker 30s linear infinite;
+  --animate-env-pulse:    envPulse 2s ease-in-out infinite;
+  --animate-env-bob:      envBob 3.5s ease-in-out infinite;
+  --animate-news-float:   newsFloat 3.5s ease-in-out infinite;
+  --animate-gentle-sway:  gentleSway 3s ease-in-out infinite;
+  --animate-shimmer:      shimmer 1.4s infinite;
+}
+
+/* ── Keyframes ── */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes photoTicker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes envPulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.4); opacity: .7; }
+}
+@keyframes envBob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-7px); }
+}
+@keyframes newsFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-6px) rotate(-3deg); }
+}
+@keyframes gentleSway {
+  0%, 100% { transform: rotate(-6deg) scale(1); }
+  50%       { transform: rotate(6deg) scale(1.06); }
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@keyframes envBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Global base ── */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  background: var(--color-off-white);
+  color: var(--color-blue-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+/* ── Ticker animations ── */
+.ticker-track       { animation: ticker       22s linear infinite; }
+.photo-ticker-track { animation: photoTicker  30s linear infinite; }
+
+/* ── Postage stamp serrated mask (MailModal) ── */
+.stamp-mask {
+  --t: 14px;
+  -webkit-mask:
+    radial-gradient(circle at 50%   0, #0000 var(--t), #000 calc(var(--t) + .5px)) top    / 26px 100% repeat-x,
+    radial-gradient(circle at 50% 100%, #0000 var(--t), #000 calc(var(--t) + .5px)) bottom / 26px 100% repeat-x,
+    radial-gradient(circle at   0  50%, #0000 var(--t), #000 calc(var(--t) + .5px)) left   / 100% 26px repeat-y,
+    radial-gradient(circle at 100% 50%, #0000 var(--t), #000 calc(var(--t) + .5px)) right  / 100% 26px repeat-y;
+  mask:
+    radial-gradient(circle at 50%   0, #0000 var(--t), #000 calc(var(--t) + .5px)) top    / 26px 100% repeat-x,
+    radial-gradient(circle at 50% 100%, #0000 var(--t), #000 calc(var(--t) + .5px)) bottom / 26px 100% repeat-x,
+    radial-gradient(circle at   0  50%, #0000 var(--t), #000 calc(var(--t) + .5px)) left   / 100% 26px repeat-y,
+    radial-gradient(circle at 100% 50%, #0000 var(--t), #000 calc(var(--t) + .5px)) right  / 100% 26px repeat-y;
+}
+
+/* ── Envelope cursor blink ── */
+.env-cursor-blink { animation: envBlink 0.7s step-end infinite; }
+
+/* ── Select arrow ── */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232b5f8f' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  padding-right: 34px;
+}
