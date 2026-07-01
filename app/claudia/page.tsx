@@ -191,7 +191,7 @@ export default function AdminPage() {
     return (
       <div className="fixed inset-0 z-[9999] flex items-center justify-center p-6" style={{ background: 'linear-gradient(135deg,#d0e8fb 0%,#b4d4f7 50%,#c8dff9 100%)' }}>
         <motion.div
-          className={`bg-white rounded-[28px] p-12 w-full max-w-[400px] text-center ${shake ? 'animate-[shake_0.4s_ease]' : ''}`}
+          className={`bg-white rounded-[28px] p-6 sm:p-12 w-full max-w-[400px] text-center ${shake ? 'animate-[shake_0.4s_ease]' : ''}`}
           style={{ boxShadow: '0 20px 60px rgba(26,63,107,.18), 0 0 0 1.5px rgba(144,190,245,.4)' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -222,24 +222,24 @@ export default function AdminPage() {
   return (
     <>
       {/* Topbar */}
-      <header className="sticky top-0 z-[100] bg-blue-dark px-10 py-3.5 flex items-center justify-between shadow-[0_2px_16px_rgba(0,0,0,.18)]">
+      <header className="sticky top-0 z-[100] bg-blue-dark px-4 sm:px-10 py-3.5 flex items-center justify-between shadow-[0_2px_16px_rgba(0,0,0,.18)]">
         <div className="flex items-center gap-3">
           <Image src="/logo.png" alt="" width={36} height={36} className="h-9 w-auto brightness-0 invert opacity-90" />
           <span className="font-fraunces text-[1.1rem] text-white font-semibold">Events Admin</span>
-          <span className="font-raleway text-[0.62rem] font-bold tracking-[2px] uppercase bg-blue-mid text-white px-[10px] py-1 rounded-full">Private</span>
+          <span className="hidden sm:inline font-raleway text-[0.62rem] font-bold tracking-[2px] uppercase bg-blue-mid text-white px-[10px] py-1 rounded-full">Private</span>
         </div>
-        <div className="flex items-center gap-4">
-          <a href="/" target="_blank" className="text-blue-light text-[0.78rem] font-semibold no-underline hover:text-white transition-colors">Preview Website ↗</a>
-          <button onClick={doLogout} className="bg-transparent border border-[rgba(144,190,245,.4)] text-blue-light rounded-full px-[14px] py-1.5 font-raleway text-[0.68rem] font-bold tracking-[1.5px] uppercase cursor-pointer hover:bg-[rgba(255,255,255,.08)] hover:text-white transition-all">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <a href="/" target="_blank" className="text-blue-light text-[0.72rem] sm:text-[0.78rem] font-semibold no-underline hover:text-white transition-colors">Preview <span className="hidden sm:inline">Website</span> ↗</a>
+          <button onClick={doLogout} className="bg-transparent border border-[rgba(144,190,245,.4)] text-blue-light rounded-full px-2.5 py-1 sm:px-[14px] sm:py-1.5 font-raleway text-[0.62rem] sm:text-[0.68rem] font-bold tracking-[1.5px] uppercase cursor-pointer hover:bg-[rgba(255,255,255,.08)] hover:text-white transition-all">
             Log Out
           </button>
         </div>
       </header>
 
-      <div className="max-w-[1000px] mx-auto px-6 py-10 pb-20">
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 py-6 sm:py-10 pb-20">
         <div className="mb-9">
-          <h1 className="font-fraunces text-[2.4rem] font-bold text-blue-dark">Upcoming <em className="italic font-bold text-blue-mid">Events</em></h1>
-          <p className="text-[0.9rem] text-[#5a7fa8] mt-1.5">Add, edit, or remove events — changes sync to the website instantly via Supabase.</p>
+          <h1 className="font-fraunces text-[1.8rem] sm:text-[2.4rem] font-bold text-blue-dark leading-tight">Upcoming <em className="italic font-bold text-blue-mid">Events</em></h1>
+          <p className="text-[0.88rem] sm:text-[0.9rem] text-[#5a7fa8] mt-1.5">Add, edit, or remove events — changes sync to the website instantly via Supabase.</p>
         </div>
 
         {/* DB Status */}
@@ -256,12 +256,12 @@ export default function AdminPage() {
               <div className="text-[2.2rem] mb-2.5">📭</div>No events yet. Add one below!
             </div>
           ) : events.map((ev, i) => (
-            <motion.div key={ev.id} className="bg-white rounded-[14px] px-5 py-4 flex items-center gap-4 shadow-[0_2px_12px_rgba(43,95,143,0.09)] border border-[rgba(144,190,245,.3)] hover:shadow-[0_6px_22px_rgba(43,95,143,.14)] transition-shadow"
+            <motion.div key={ev.id} className="bg-white rounded-[14px] p-4 sm:px-5 sm:py-4 flex items-center gap-3 sm:gap-4 shadow-[0_2px_12px_rgba(43,95,143,0.09)] border border-[rgba(144,190,245,.3)] hover:shadow-[0_6px_22px_rgba(43,95,143,.14)] transition-shadow"
               initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}>
               <div className="w-8 h-8 rounded-full bg-blue-hero text-blue-dark font-fraunces font-bold text-[0.95rem] flex items-center justify-center flex-shrink-0">{i+1}</div>
               <div className="flex-1 min-w-0">
-                <div className="font-fraunces font-bold text-[0.95rem] text-blue-dark truncate">{ev.title}</div>
-                <div className="text-[0.75rem] text-[#5a7fa8] mt-0.5">{ev.day}, {ev.date} · {ev.venue}</div>
+                <div className="font-fraunces font-bold text-[0.88rem] sm:text-[0.95rem] text-blue-dark truncate">{ev.title}</div>
+                <div className="text-[0.7rem] sm:text-[0.75rem] text-[#5a7fa8] mt-0.5 truncate">{ev.day}, {ev.date} · {ev.venue}</div>
               </div>
               <div className="flex gap-2 flex-shrink-0">
                 <button onClick={() => startEdit(ev)} className="w-8 h-8 rounded-[9px] bg-blue-hero text-blue-DEFAULT border-none cursor-pointer flex items-center justify-center hover:bg-blue-light hover:scale-105 transition-all">
@@ -277,7 +277,7 @@ export default function AdminPage() {
 
         {/* Form */}
         <p className="font-raleway font-bold text-[0.65rem] tracking-[3px] uppercase text-blue-mid mb-3.5">Add new event</p>
-        <div className="form-card bg-white rounded-[22px] px-[38px] py-[34px] shadow-[0_4px_26px_rgba(43,95,143,.10)] border border-[rgba(144,190,245,.3)]">
+        <div className="form-card bg-white rounded-[22px] px-5 py-6 sm:px-[38px] sm:py-[34px] shadow-[0_4px_26px_rgba(43,95,143,.10)] border border-[rgba(144,190,245,.3)]">
           <div className="flex items-center justify-between flex-wrap gap-2.5 mb-6 pb-[18px] border-b border-blue-light">
             <h2 className="font-fraunces text-[1.4rem] font-bold text-blue-dark">
               {editId ? <>Editing <em className="font-bold italic text-blue-mid">Event</em></> : <>New <em className="font-bold italic text-blue-mid">Event</em></>}
@@ -286,7 +286,7 @@ export default function AdminPage() {
           </div>
 
           <form onSubmit={handleSubmit} noValidate>
-            <div className="grid grid-cols-2 gap-[18px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[14px] sm:gap-[18px]">
               {/* Title */}
               <div className="flex flex-col gap-1.5">
                 <label className="font-inter font-semibold text-[0.75rem] tracking-[0.8px] uppercase text-blue-DEFAULT">Event Name</label>
@@ -315,17 +315,17 @@ export default function AdminPage() {
                 <input className={inp} type="text" placeholder="Studio Bloom, Bandra" value={form.venue} onChange={e => setForm(f=>({...f,venue:e.target.value}))} required />
               </div>
               {/* Link */}
-              <div className="col-span-2 flex flex-col gap-1.5">
+              <div className="col-span-1 sm:col-span-2 flex flex-col gap-1.5">
                 <label className="font-inter font-semibold text-[0.75rem] tracking-[0.8px] uppercase text-blue-DEFAULT">Registration Link</label>
                 <input className={inp} type="url" placeholder="https://…" value={form.link} onChange={e => setForm(f=>({...f,link:e.target.value}))} required />
               </div>
               {/* Desc */}
-              <div className="col-span-2 flex flex-col gap-1.5">
+              <div className="col-span-1 sm:col-span-2 flex flex-col gap-1.5">
                 <label className="font-inter font-semibold text-[0.75rem] tracking-[0.8px] uppercase text-blue-DEFAULT">Description <span className="font-normal normal-case tracking-normal text-[#9ab5d0] text-[0.7rem]">(optional)</span></label>
                 <textarea className={`${inp} resize-y min-h-[64px]`} rows={3} placeholder="A calming yoga session with rescue puppies…" value={form.cause} onChange={e => setForm(f=>({...f,cause:e.target.value}))} />
               </div>
               {/* Photo */}
-              <div className="col-span-2 flex flex-col gap-1.5">
+              <div className="col-span-1 sm:col-span-2 flex flex-col gap-1.5">
                 <label className="font-inter font-semibold text-[0.75rem] tracking-[0.8px] uppercase text-blue-DEFAULT">Photo <span className="font-normal normal-case tracking-normal text-[#9ab5d0] text-[0.7rem]">(optional)</span></label>
                 <div
                   onClick={() => fileRef.current?.click()}
@@ -349,15 +349,15 @@ export default function AdminPage() {
               </div>
             </div>
 
-            <div className="flex gap-2.5 mt-6 pt-[22px] border-t border-blue-light flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-2.5 mt-6 pt-[22px] border-t border-blue-light">
               <button type="submit" disabled={saving}
-                className="flex-1 min-w-[150px] bg-blue-dark text-white border-none rounded-full py-[13px] px-6 font-raleway font-bold text-[0.78rem] tracking-[1.5px] uppercase cursor-pointer flex items-center justify-center gap-2 hover:bg-blue-DEFAULT hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0 transition-all">
+                className="w-full sm:flex-1 min-w-[150px] bg-blue-dark text-white border-none rounded-full py-[13px] px-6 font-raleway font-bold text-[0.78rem] tracking-[1.5px] uppercase cursor-pointer flex items-center justify-center gap-2 hover:bg-blue-DEFAULT hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0 transition-all">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 {saving ? 'Saving…' : editId ? 'Update Event' : 'Save Event to Website'}
               </button>
               {editId && (
                 <button type="button" onClick={resetForm}
-                  className="bg-off-white text-blue-DEFAULT border border-blue-light rounded-full py-[13px] px-[22px] font-raleway font-bold text-[0.78rem] tracking-[1.5px] uppercase cursor-pointer hover:bg-blue-light transition-all">
+                  className="w-full sm:w-auto bg-off-white text-blue-DEFAULT border border-blue-light rounded-full py-[13px] px-[22px] font-raleway font-bold text-[0.78rem] tracking-[1.5px] uppercase cursor-pointer hover:bg-blue-light transition-all">
                   Cancel
                 </button>
               )}
