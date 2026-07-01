@@ -30,7 +30,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 0.68, 0, 1.2] }}
         >
-          <Image src="/logo.PNG" alt="The Day Off Club" width={160} height={80} className="mb-[10px]" />
+          <Image src="/logo.png" alt="The Day Off Club" width={160} height={80} className="mb-[10px]" />
           <p className="font-raleway font-bold text-xs tracking-[3.5px] uppercase text-blue-mid mb-5">
             The Day Off Club
           </p>

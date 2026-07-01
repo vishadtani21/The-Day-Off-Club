@@ -197,7 +197,7 @@ export default function AdminPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Image src="/logo.PNG" alt="The Day Off Club" width={150} height={150} className="h-32 w-auto mx-auto mb-[18px]" />
+          <Image src="/logo.png" alt="The Day Off Club" width={150} height={150} className="h-32 w-auto mx-auto mb-[18px]" />
           <h1 className="font-fraunces text-[1.65rem] font-bold text-blue-dark mb-1">Welcome, <em className="italic font-bold text-blue-mid">Claudia</em></h1>
           <p className="text-[0.82rem] text-[#7a9fc0] mb-8">Enter your credentials to access the admin panel.</p>
 
@@ -224,7 +224,7 @@ export default function AdminPage() {
       {/* Topbar */}
       <header className="sticky top-0 z-[100] bg-blue-dark px-10 py-3.5 flex items-center justify-between shadow-[0_2px_16px_rgba(0,0,0,.18)]">
         <div className="flex items-center gap-3">
-          <Image src="/logo.PNG" alt="" width={36} height={36} className="h-9 w-auto brightness-0 invert opacity-90" />
+          <Image src="/logo.png" alt="" width={36} height={36} className="h-9 w-auto brightness-0 invert opacity-90" />
           <span className="font-fraunces text-[1.1rem] text-white font-semibold">Events Admin</span>
           <span className="font-raleway text-[0.62rem] font-bold tracking-[2px] uppercase bg-blue-mid text-white px-[10px] py-1 rounded-full">Private</span>
         </div>
