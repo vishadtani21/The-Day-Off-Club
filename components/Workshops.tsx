@@ -5,12 +5,9 @@ const workshops = [
   { tag: 'Our First Workshop', title: 'Puppy Yoga', desc: 'A calming yoga session with rescue puppies. Movement, connection, and open playtime.', reel: 'https://www.instagram.com/reel/DMXrWZPtsBz/?igsh=MWF5OWxmdGUzNXpraA==' },
   { title: 'Pilates & Puppies', desc: 'Low impact Pilates followed by rescue pups roaming freely. Pure chaos, pure joy.', reel: 'https://www.instagram.com/reel/DVOKccvDH7h/?igsh=MWsycXk4MnBoNWJlNA==' },
   { title: 'Tote Bag Painting', desc: 'One hour of creative freedom. Paint your own canvas tote, no experience needed.', reel: 'https://www.instagram.com/reel/DOOEgjBDMUF/?igsh=Mzg4NGowczFzbWVk' },
-  { title: 'Art & Icing', desc: 'Two hours of hands-on cake decorating. Learn icing techniques and take home everything you make.', reel: 'https://www.instagram.com/reel/DSxcn__jJH2/?igsh=MW9ta2dibnJxeHo4YQ==' },
   { title: 'Pottery With Puppies', desc: 'Three hours of clay and calm, with rescue puppies wandering through the studio.', reel: 'https://www.instagram.com/reel/DYxEku2ssYD/?igsh=MWtmcGF4N25ocTd3cQ==' },
   { collab: true, title: 'Puppy Yoga × Aryodaya KIA', desc: 'An initiative by Aryodaya KIA — Puppy Yoga by The Day Off Club at Aryodaya KIA Showroom, Ghat Road. 7th June 2026.', reel: 'https://www.instagram.com/reel/DZUJ2pHzvs6/?igsh=angxcjVuMGw3Zmpo' },
   { collab: true, title: 'Project PAWsitivity × Sehej Foundation', desc: 'An MMA warm-up, followed by Puppy Yoga and Canvas Painting — in collaboration with The Sehej Foundation.', reel: 'https://www.instagram.com/reel/DWjIKi6MxQ2/?igsh=MXRxbnV5N3pkdTB4NQ==' },
-  { collab: true, title: 'Puppy Yoga × The Happy Hive', desc: 'Puppy Yoga at Chitnavis Centre as part of The Happy Hive Kids Carnival. A joyful afternoon of pups, play, and pure happiness.', reel: 'https://www.instagram.com/reel/DTu4iK0jd2c/?igsh=ZWZyeWo4YW5xd3o2' },
-  { collab: true, title: 'Puppy Yoga × Edify School', desc: 'Initiated by Edify School — Puppy Yoga brought to life by The Day Off Club. A special session for young minds and wagging tails.', reel: 'https://www.instagram.com/reel/DYNAnC0NIRO/?igsh=MWk3MnV2ODlkaHFwag==' },
   { collab: true, title: 'Pace, Paws & Plates', desc: 'The Day Off Club × Raftaar Run Club × Traders Cafe. An exclusive all-girls workshop — a 3K/5K run, Puppy Yoga, and Build Your Own Salad.', reel: 'https://www.instagram.com/reel/DZmM0L7tk2Q/?igsh=eDR5anUxM2Y1ZGNm' },
 ]
 
@@ -18,8 +15,7 @@ export default function Workshops() {
   return (
     <section id="services" className="relative">
       <div
-        className="relative py-[40px] sm:py-[60px] px-4 sm:px-10 text-center"
-        style={{ backgroundImage: "url('/bluee.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="relative py-[40px] sm:py-[60px] px-4 sm:px-10 text-center bg-[#f0f7fe]"
       >
         <motion.h2
           className="font-fraunces text-[2.8rem] sm:text-[4.5rem] font-bold text-blue mb-8 sm:mb-10"

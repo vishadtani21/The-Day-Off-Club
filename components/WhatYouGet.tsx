@@ -10,7 +10,7 @@ const cards = [
 
 export default function WhatYouGet() {
   return (
-    <section className="relative bg-white py-20 px-10 text-center overflow-hidden">
+    <section className="relative bg-white py-10 sm:py-20 px-4 sm:px-10 text-center overflow-hidden">
       {/* Repeating wavy lines & circles background pattern */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.05] text-[#2b5f8f]" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -38,7 +38,7 @@ export default function WhatYouGet() {
       </svg>
 
       <motion.h2
-        className="font-fraunces text-[3.2rem] font-bold text-blue mb-12"
+        className="font-fraunces text-[2.2rem] sm:text-[3.2rem] font-bold text-blue mb-8 sm:mb-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -46,18 +46,18 @@ export default function WhatYouGet() {
       >
         What You Get?
       </motion.h2>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1040px] mx-auto relative z-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-[1040px] mx-auto relative z-10">
         {cards.map((c, i) => (
           <motion.div
             key={i}
-            className="flex flex-col items-center text-center px-5 py-8 hover:-translate-y-1.5 transition-transform duration-300"
+            className="flex flex-col items-center justify-center text-center p-5 aspect-square rounded-full border border-[rgba(144,190,245,0.4)] bg-[#f4f8fd]/50 hover:bg-[#eef4fb]/80 hover:shadow-[0_8px_24px_rgba(43,95,143,0.06)] hover:-translate-y-1.5 transition-all duration-300"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.55, delay: i * 0.08 }}
           >
-            <h3 className="font-fraunces text-[1.1rem] font-bold text-blue-dark mb-[10px] leading-[1.3]">{c.title}</h3>
-            <p className="font-inter text-[0.88rem] text-[#3a5a80] leading-[1.6]">{c.desc}</p>
+            <h3 className="font-fraunces text-[0.9rem] sm:text-[1.1rem] font-bold text-blue-dark mb-[6px] sm:mb-[10px] leading-[1.3]">{c.title}</h3>
+            <p className="font-inter text-[0.74rem] sm:text-[0.88rem] text-[#3a5a80] leading-[1.5] max-w-[140px] sm:max-w-none">{c.desc}</p>
           </motion.div>
         ))}
       </div>

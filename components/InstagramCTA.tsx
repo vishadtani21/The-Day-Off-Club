@@ -5,13 +5,13 @@ export default function InstagramCTA({ onMailOpen }: { onMailOpen: () => void })
   return (
     <>
       <section
-        className="relative py-20 px-10 text-center overflow-hidden"
+        className="relative py-12 sm:py-20 px-4 sm:px-10 text-center overflow-hidden"
         style={{ backgroundImage: "url('/bg2.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
       >
         <div className="absolute inset-0 bg-[rgba(26,63,107,0.55)] pointer-events-none" />
         <div className="relative z-10">
           <motion.h2
-            className="font-fraunces text-[3rem] font-bold text-white mb-[14px]"
+            className="font-fraunces text-[1.8rem] sm:text-[3rem] font-bold text-white mb-[14px]"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

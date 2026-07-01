@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="relative bg-blue-hero pt-[110px] md:pt-[80px] pb-10 md:pb-0 overflow-hidden">
+    <section className="relative bg-blue-hero pt-[90px] md:pt-[80px] pb-10 md:pb-0 overflow-hidden">
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
