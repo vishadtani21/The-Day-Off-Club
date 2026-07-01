@@ -42,7 +42,7 @@ function TicketCard({ ev, i }: { ev: Event; i: number }) {
       href={ev.link}
       target="_blank"
       rel="noopener"
-      className="flex items-stretch w-full max-w-[720px] rounded-[14px] border border-[#e4ddd5] no-underline cursor-pointer hover:-translate-y-1 hover:scale-[1.012] transition-all duration-300"
+      className="flex flex-col sm:flex-row items-stretch w-full max-w-[720px] rounded-[14px] border border-[#e4ddd5] no-underline cursor-pointer hover:-translate-y-1 hover:scale-[1.012] transition-all duration-300"
       style={{
         background: '#f9f7f4',
         boxShadow: '0 4px 20px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.06)',
@@ -59,22 +59,16 @@ function TicketCard({ ev, i }: { ev: Event; i: number }) {
         <img
           src={img}
           alt={ev.title}
-          className="flex-shrink-0 w-[150px] object-cover"
-          style={{ minHeight: '150px', borderRadius: '14px 0 0 14px' }}
+          className="flex-shrink-0 w-full sm:w-[150px] h-[160px] sm:h-auto object-cover rounded-t-[14px] sm:rounded-l-[14px] sm:rounded-tr-none"
         />
       ) : (
         <div
-          className="flex-shrink-0 w-[150px]"
-          style={{
-            minHeight: '150px',
-            borderRadius: '14px 0 0 14px',
-            background: 'linear-gradient(135deg,#8faec8,#2b5f8f)',
-          }}
+          className="flex-shrink-0 w-full sm:w-[150px] h-[160px] sm:h-auto rounded-t-[14px] sm:rounded-l-[14px] sm:rounded-tr-none bg-gradient-to-br from-[#8faec8] to-[#2b5f8f]"
         />
       )}
 
       {/* ── Info ── */}
-      <div className="flex-1 px-6 py-5 text-left flex flex-col justify-center gap-1 min-w-0">
+      <div className="flex-1 p-5 sm:px-6 sm:py-5 text-left flex flex-col justify-center gap-1 min-w-0">
         <div className="font-inter text-[0.76rem] font-medium tracking-[0.2px]" style={{ color: '#8c8480' }}>
           {ev.day} · {ev.time}
         </div>
@@ -96,30 +90,28 @@ function TicketCard({ ev, i }: { ev: Event; i: number }) {
 
       {/* ── Perforated divider ── */}
       <div
-        className="flex-shrink-0 w-7 relative flex flex-col items-center justify-center"
-        style={{ background: '#f9f7f4' }}
+        className="flex-shrink-0 w-full sm:w-7 h-7 sm:h-auto relative flex flex-row sm:flex-col items-center justify-center bg-[#f9f7f4]"
       >
-        {/* Top notch */}
+        {/* Top/Left notch */}
         <div
-          className="absolute top-[-1px] left-1/2 -translate-x-1/2 z-10"
-          style={{ width: 24, height: 13, borderRadius: '0 0 14px 14px', background: 'rgba(13,34,64,0.85)' }}
+          className="absolute top-1/2 sm:top-[-1px] left-[-12px] sm:left-1/2 -translate-y-1/2 sm:-translate-y-0 sm:-translate-x-1/2 z-10 w-[24px] sm:w-[24px] h-[24px] sm:h-[13px] rounded-r-full sm:rounded-t-none sm:rounded-b-[14px] bg-[#0d2240]"
+          style={{ background: 'rgba(13,34,64,0.85)' }}
         />
         {/* Dashed line */}
         <div
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{ top: 18, bottom: 18, width: 0, borderLeft: '2px dashed #c8c0b8' }}
+          className="absolute left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 top-1/2 sm:top-4 sm:bottom-4 w-auto sm:w-0 h-0 sm:h-auto border-t-2 sm:border-t-0 sm:border-l-2 border-dashed border-[#c8c0b8]"
         />
-        {/* Bottom notch */}
+        {/* Bottom/Right notch */}
         <div
-          className="absolute bottom-[-1px] left-1/2 -translate-x-1/2 z-10"
-          style={{ width: 24, height: 13, borderRadius: '14px 14px 0 0', background: 'rgba(13,34,64,0.85)' }}
+          className="absolute top-1/2 sm:bottom-[-1px] right-[-12px] sm:left-1/2 -translate-y-1/2 sm:-translate-y-0 sm:-translate-x-1/2 z-10 w-[24px] sm:w-[24px] h-[24px] sm:h-[13px] rounded-l-full sm:rounded-b-none sm:rounded-t-[14px] bg-[#0d2240]"
+          style={{ background: 'rgba(13,34,64,0.85)' }}
         />
       </div>
 
       {/* ── Date block ── */}
       <div
-        className="flex-shrink-0 flex flex-col items-center justify-center gap-0.5"
-        style={{ width: 120, padding: '16px 10px', borderRadius: '0 14px 14px 0', overflow: 'hidden' }}
+        className="flex-shrink-0 flex flex-col items-center justify-center gap-0.5 w-full sm:w-[120px] py-4 sm:py-0 sm:h-auto rounded-b-[14px] sm:rounded-r-[14px] sm:rounded-bl-none overflow-hidden"
+        style={{ background: '#f9f7f4' }}
       >
         <span className="font-fraunces text-[0.85rem] font-normal italic capitalize tracking-[0.5px]" style={{ color: '#4a6a8a' }}>
           {month}
@@ -157,7 +149,7 @@ export default function Events() {
   return (
     <section
       id="events"
-      className="relative py-[90px] px-10 text-center overflow-hidden"
+      className="relative py-[60px] sm:py-[90px] px-4 sm:px-10 text-center overflow-hidden"
       style={{
         backgroundImage: "url('/bg2.jpeg')",
         backgroundSize: 'cover',
@@ -181,7 +173,7 @@ export default function Events() {
         </motion.p>
 
         <motion.h2
-          className="font-fraunces text-[3.4rem] font-bold text-white mb-14 leading-[1.1]"
+          className="font-fraunces text-[2.2rem] sm:text-[3.4rem] font-bold text-white mb-10 sm:mb-14 leading-[1.1]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

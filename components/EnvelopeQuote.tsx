@@ -31,11 +31,11 @@ export default function EnvelopeQuote() {
   const q = QUOTES[idx]
 
   return (
-    <div className="fixed bottom-7 right-7 z-[9999] flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 sm:bottom-7 right-4 sm:right-7 z-[9999] flex flex-col items-end gap-3">
       <AnimatePresence>
         {open && (
           <motion.div
-            className="w-[320px] bg-[#fffef9] rounded-[18px] px-[26px] py-7 relative"
+            className="w-[280px] sm:w-[320px] bg-[#fffef9] rounded-[18px] px-[22px] sm:px-[26px] py-6 sm:py-7 relative"
             style={{ boxShadow: '0 20px 60px rgba(0,0,0,.18), 0 0 0 1px rgba(200,223,249,.4)' }}
             initial={{ opacity: 0, y: 18, scale: 0.93 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}

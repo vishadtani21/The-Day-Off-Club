@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function WhatIsSection() {
   return (
-    <section className="relative bg-white py-[60px] px-10 text-center overflow-hidden">
+    <section className="relative bg-white py-[40px] sm:py-[60px] px-4 sm:px-10 text-center overflow-hidden">
       {/* Repeating wavy lines & circles background pattern */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.05] text-[#2b5f8f]" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -31,7 +31,7 @@ export default function WhatIsSection() {
       </svg>
 
       <motion.h2
-        className="font-fraunces text-[3.2rem] font-bold text-blue leading-[1.1] mb-7"
+        className="font-fraunces text-[2.2rem] sm:text-[3.2rem] font-bold text-blue leading-[1.1] mb-6 sm:mb-7"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
@@ -46,7 +46,7 @@ export default function WhatIsSection() {
         viewport={{ once: true, margin: '-40px' }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        <p className="font-fraunces text-[1.4rem] font-bold text-blue-dark leading-[1.4] mb-[18px]">
+        <p className="font-fraunces text-[1.2rem] sm:text-[1.4rem] font-bold text-blue-dark leading-[1.4] mb-[18px]">
           Taking a break shouldn&apos;t mean doing nothing.
         </p>
         <p className="font-inter text-[0.97rem] text-[#3a5a80] leading-[1.75] mb-4">

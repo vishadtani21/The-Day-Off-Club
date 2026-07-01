@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="relative bg-blue-hero pt-[60px] overflow-hidden">
+    <section className="relative bg-blue-hero pt-[110px] md:pt-[80px] pb-10 md:pb-0 overflow-hidden">
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
@@ -15,39 +15,40 @@ export default function Hero() {
             linear-gradient(rgba(43,95,143,0.07) 1px, transparent 1px),
             linear-gradient(90deg, rgba(43,95,143,0.07) 1px, transparent 1px)
           `,
-          backgroundSize: '60px 60px, 60px 60px, 20px 20px, 20px 20px',
+          backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px',
+          backgroundPosition: 'center center',
         }}
       />
       {/* Top-right glow */}
       <div className="absolute -top-20 -right-24 w-[480px] h-[480px] rounded-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(circle, rgba(144,190,245,0.32) 0%, transparent 70%)' }} />
 
-      <div className="relative z-10 max-w-[1100px] mx-auto flex items-center justify-between gap-[60px] px-10">
+      <div className="relative z-10 max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-[60px] px-6 md:px-10">
         {/* Text */}
         <motion.div
-          className="flex-1 text-left -mt-36"
+          className="flex-1 text-left mt-0 md:-mt-36"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 0.68, 0, 1.2] }}
         >
-          <img src="/logo.png" alt="The Day Off Club" className="mb-[10px] w-[160px] h-auto object-contain" />
+          <img src="/logo.png" alt="The Day Off Club" className="mb-[10px] w-[140px] sm:w-[160px] h-auto object-contain" />
           <p className="font-raleway font-bold text-xs tracking-[3.5px] uppercase text-blue-mid mb-5">
             The Day Off Club
           </p>
-          <p className="font-fraunces text-[2.1rem] leading-[1.4] text-blue-dark mb-3">
+          <p className="font-fraunces text-[1.6rem] sm:text-[2.1rem] leading-[1.4] text-blue-dark mb-3">
             We curate intentional experiences that help you slow down, learn, connect, and give back —
           </p>
-          <p className="font-fraunces text-[1.7rem] italic font-light leading-[1.4] text-blue-mid">
+          <p className="font-fraunces text-[1.3rem] sm:text-[1.7rem] italic font-light leading-[1.4] text-blue-mid">
             so your break feels productive, not guilty.
           </p>
-          <p className="font-fraunces text-[1.1rem] font-bold text-blue-dark mt-[18px] tracking-[0.5px]">
+          <p className="font-fraunces text-[0.95rem] sm:text-[1.1rem] font-bold text-blue-dark mt-[18px] tracking-[0.5px]">
             Day Off? Make it count.
           </p>
         </motion.div>
 
         {/* Image */}
         <motion.div
-          className="flex-none w-[400px] max-w-[400px]"
+          className="flex-none w-full md:w-[400px] max-w-[400px]"
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}

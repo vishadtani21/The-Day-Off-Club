@@ -18,11 +18,11 @@ export default function Workshops() {
   return (
     <section id="services" className="relative">
       <div
-        className="relative py-[60px] px-10 text-center"
+        className="relative py-[40px] sm:py-[60px] px-4 sm:px-10 text-center"
         style={{ backgroundImage: "url('/bluee.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <motion.h2
-          className="font-fraunces text-[4.5rem] font-bold text-blue mb-10"
+          className="font-fraunces text-[2.8rem] sm:text-[4.5rem] font-bold text-blue mb-8 sm:mb-10"
           style={{ textShadow: '2px 2px 0px rgba(255,255,255,0.4)' }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
