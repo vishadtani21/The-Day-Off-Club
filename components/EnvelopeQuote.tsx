@@ -93,7 +93,7 @@ export default function EnvelopeQuote() {
         {!open && (
           <span className="absolute top-1.5 right-1.5 w-[9px] h-[9px] rounded-full bg-yellow-300 border-2 border-blue-dark animate-envPulse" />
         )}
-        <Image src="/envelope.jfif" alt="notes" width={42} height={42} className="w-[42px] h-[42px] object-cover rounded-full" />
+        <Image src="/envelope.jpg" alt="notes" width={42} height={42} className="w-[42px] h-[42px] object-cover rounded-full" />
       </motion.button>
     </div>
   )
