@@ -26,12 +26,12 @@ export default function Hero() {
       <div className="relative z-10 max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-[60px] px-6 md:px-10">
         {/* Text */}
         <motion.div
-          className="flex-1 text-left mt-0 md:-mt-36"
+          className="flex-1 text-center md:text-left mt-0 md:-mt-36 flex flex-col items-center md:items-start"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 0.68, 0, 1.2] }}
         >
-          <img src="/logo.png" alt="The Day Off Club" className="mb-[10px] w-[140px] sm:w-[160px] h-auto object-contain" />
+          <img src="/logo.png" alt="The Day Off Club" className="mb-[10px] w-[140px] sm:w-[160px] h-auto object-contain mx-auto md:mx-0" />
           <p className="font-raleway font-bold text-xs tracking-[3.5px] uppercase text-blue-mid mb-5">
             The Day Off Club
           </p>

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-dark text-blue-light py-9 px-10 text-center flex flex-col items-center gap-3">
+    <footer className="bg-blue-dark text-blue-light pt-2 pb-9 px-10 text-center flex flex-col items-center gap-3">
       <div className="flex justify-center">
         <img src="/white_logo.png" alt="The Day Off Club" className="h-[130px] w-auto object-contain opacity-90" />
       </div>

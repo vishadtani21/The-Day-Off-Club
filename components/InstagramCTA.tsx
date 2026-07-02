@@ -5,7 +5,7 @@ export default function InstagramCTA({ onMailOpen }: { onMailOpen: () => void })
   return (
     <>
       <section
-        className="relative py-12 sm:py-20 px-4 sm:px-10 text-center overflow-hidden"
+        className="relative pt-12 pb-24 sm:pt-20 sm:pb-32 px-4 sm:px-10 text-center overflow-hidden"
         style={{ backgroundImage: "url('/bg2.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
       >
         <div className="absolute inset-0 bg-[rgba(26,63,107,0.55)] pointer-events-none" />

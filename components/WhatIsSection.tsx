@@ -40,7 +40,7 @@ export default function WhatIsSection() {
         What is The Day Off Club?
       </motion.h2>
       <motion.div
-        className="max-w-[640px] mx-auto text-left relative z-10"
+        className="max-w-[640px] mx-auto text-center md:text-left relative z-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
