@@ -75,7 +75,7 @@ export default function PressWidget() {
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 0.35, ease: [0.34, 1.56, 0.64, 1] }}
               >
-                <Image src="/newspaper.png" alt="Press Coverage" width={56} height={56} className="w-full h-full object-contain" />
+                <Image src="/newspaper.webp" alt="Press Coverage" width={56} height={56} sizes="56px" className="w-full h-full object-contain" />
               </motion.button>
             )}
           </AnimatePresence>
