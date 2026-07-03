@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function SocialSidebar({ onMailOpen }: { onMailOpen: () => void }) {
+export default function SocialSidebar() {
   return (
     <aside className="fixed right-[18px] top-1/2 -translate-y-1/2 z-[900] hidden lg:flex flex-col gap-3">
       <a href="https://chat.whatsapp.com/E6EpNtevkj3HSSCc88NfUd" target="_blank" rel="noopener" aria-label="WhatsApp"
@@ -12,7 +12,11 @@ export default function SocialSidebar({ onMailOpen }: { onMailOpen: () => void }
           <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.524 3.66 1.438 5.168L2 22l4.985-1.424A9.956 9.956 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 0 1-4.071-1.115l-.29-.173-3.002.857.844-3.093-.19-.304A7.946 7.946 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
         </svg>
       </a>
-      <button onClick={onMailOpen} aria-label="Email"
+      <button onClick={() => {
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('open-mail-modal'))
+        }
+      }} aria-label="Email"
         className="flex items-center justify-center w-[34px] h-[34px] bg-blue-DEFAULT rounded-full text-white hover:bg-blue-dark hover:scale-110 transition-all border-none cursor-pointer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>

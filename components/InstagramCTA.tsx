@@ -1,12 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 
-export default function InstagramCTA({ onMailOpen }: { onMailOpen: () => void }) {
+export default function InstagramCTA() {
   return (
     <>
       <section
         className="relative pt-12 pb-24 sm:pt-20 sm:pb-32 px-4 sm:px-10 text-center overflow-hidden"
-        style={{ backgroundImage: "url('/bg2.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
+        style={{ backgroundImage: "url('/bg2.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}
       >
         <div className="absolute inset-0 bg-[rgba(26,63,107,0.55)] pointer-events-none" />
         <div className="relative z-10">
@@ -42,7 +42,14 @@ export default function InstagramCTA({ onMailOpen }: { onMailOpen: () => void })
           </motion.a>
           <p className="mt-6 mb-0 text-[0.88rem] text-white/75">
             Have a question?{' '}
-            <button onClick={onMailOpen} className="text-white underline underline-offset-2 font-semibold hover:opacity-80 transition-opacity bg-transparent border-none cursor-pointer">
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(new CustomEvent('open-mail-modal'))
+                }
+              }}
+              className="text-white underline underline-offset-2 font-semibold hover:opacity-80 transition-opacity bg-transparent border-none cursor-pointer"
+            >
               Drop us a mail
             </button>
           </p>

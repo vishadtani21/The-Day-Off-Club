@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const SUPABASE_URL = 'https://rxfyqgildzmioeougkdo.supabase.co'
 const SUPABASE_KEY = 'sb_publishable_8g5MvDq-6df_IgxWz33MgQ_QgIAOI7F'
@@ -56,10 +57,14 @@ function TicketCard({ ev, i }: { ev: Event; i: number }) {
       {/* ── Photo ── */}
       {img ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={img}
           alt={ev.title}
+          width={150}
+          height={160}
+          sizes="(max-width: 640px) 100vw, 150px"
           className="flex-shrink-0 w-full sm:w-[150px] h-[160px] sm:h-auto object-cover rounded-t-[14px] sm:rounded-l-[14px] sm:rounded-tr-none"
+          loading="lazy"
         />
       ) : (
         <div
@@ -151,7 +156,7 @@ export default function Events() {
       id="events"
       className="relative py-[60px] sm:py-[90px] px-4 sm:px-10 text-center overflow-hidden"
       style={{
-        backgroundImage: "url('/bg2.jpeg')",
+        backgroundImage: "url('/bg2.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -199,7 +204,14 @@ export default function Events() {
           ) : (
             <div className="flex flex-col items-center gap-3 py-5 pb-12">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/flower.png" alt="" className="w-[60px] h-[60px] object-contain animate-gentle-sway" />
+              <Image
+                src="/flower.webp"
+                alt=""
+                width={60}
+                height={60}
+                className="w-[60px] h-[60px] object-contain animate-gentle-sway"
+                loading="lazy"
+              />
               <p className="font-fraunces text-[1.8rem] font-semibold text-white">Something special is brewing.</p>
               <p className="font-inter text-[1rem] max-w-[420px] leading-[1.65]" style={{ color: 'rgba(255,255,255,0.62)' }}>
                 We&apos;re behind the scenes crafting your next favourite day off. Stay tuned.

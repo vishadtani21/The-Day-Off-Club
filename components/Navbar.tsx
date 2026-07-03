@@ -30,10 +30,14 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center">
-          <img
-            src="/logo.png"
+          <Image
+            src="/logo.webp"
             alt="The Day Off Club"
+            width={160}
+            height={52}
+            sizes="160px"
             className="h-[52px] w-auto object-contain"
+            priority
           />
         </div>
 

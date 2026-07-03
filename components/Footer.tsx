@@ -4,7 +4,14 @@ export default function Footer() {
   return (
     <footer className="bg-blue-dark text-blue-light pt-2 pb-9 px-10 text-center flex flex-col items-center gap-3">
       <div className="flex justify-center">
-        <img src="/white_logo.png" alt="The Day Off Club" className="h-[130px] w-auto object-contain opacity-90" />
+        <Image
+          src="/white_logo.webp"
+          alt="The Day Off Club"
+          width={130}
+          height={130}
+          className="h-[130px] w-auto object-contain opacity-90"
+          loading="lazy"
+        />
       </div>
       <p className="text-[0.82rem] opacity-80">Day Off? Make it count.</p>
       <p className="text-[0.82rem] opacity-80">© 2026 The Day Off Club. Slow down. Learn. Connect. Give back.</p>

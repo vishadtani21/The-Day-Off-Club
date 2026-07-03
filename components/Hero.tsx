@@ -31,7 +31,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 0.68, 0, 1.2] }}
         >
-          <img src="/logo.png" alt="The Day Off Club" className="mb-[10px] w-[140px] sm:w-[160px] h-auto object-contain mx-auto md:mx-0" />
+          <Image src="/logo.webp" alt="The Day Off Club" width={160} height={160} sizes="(max-width: 768px) 140px, 160px" className="mb-[10px] w-[140px] sm:w-[160px] h-auto object-contain mx-auto md:mx-0" priority />
           <p className="font-raleway font-bold text-xs tracking-[3.5px] uppercase text-blue-mid mb-5">
             The Day Off Club
           </p>
@@ -54,13 +54,15 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}
         >
           <Image
-            src="/hero_team.jpg"
+            src="/hero_team.webp"
             alt="The Day Off Club team"
             width={400}
             height={533}
+            sizes="(max-width: 768px) 100vw, 400px"
             className="w-full rounded-[20px] border-[5px] border-white object-cover object-top"
             style={{ boxShadow: '0 12px 40px rgba(43,95,143,0.20), 0 0 0 2px #90bef5' }}
             priority
+            fetchPriority="high"
           />
         </motion.div>
       </div>

@@ -6,7 +6,7 @@ const founders = [
   {
     name: 'Arshpreet Puri',
     role: 'Co-Founder',
-    img: '/arshi.jpeg',
+    img: '/arshi.webp',
     desc: "Why just scroll weekends away? We dreamed of workshops where you create, unwind, and leave feeling inspired.",
     quote: '"Sometimes, the shortest pause energise you!"',
     style: {},
@@ -14,7 +14,7 @@ const founders = [
   {
     name: 'Vishakha Adtani',
     role: 'Co-Founder',
-    img: '/vishakha.jpeg',
+    img: '/vishakha.webp',
     desc: "Some breaks don't need to be earned. Rest, when it's real, leaves you feeling productive without burning out.",
     quote: '"A real break shouldn\'t feel guilty, it should feel like you."',
     style: { objectPosition: 'center 65%' },
@@ -22,7 +22,7 @@ const founders = [
   {
     name: 'Gunjyot Tuli',
     role: 'Co-Founder',
-    img: '/gunjyot.jpeg',
+    img: '/gunjyot.webp',
     desc: "To bring strangers together through curiosity and creativity, reminding everyone that it's never too late to try.",
     quote: '"The best part? People leaving feeling wholesome with new friendships and warm memories."',
     style: { objectPosition: 'center 60%' },
@@ -72,7 +72,7 @@ export default function Founders() {
             >
               <div className="w-[180px] h-[180px] rounded-full overflow-hidden border-4 border-white mb-[18px]"
                 style={{ boxShadow: '0 8px 32px rgba(43,95,143,0.18), 0 0 0 3px #90bef5' }}>
-                <Image src={f.img} alt={f.name} width={180} height={180} className="w-full h-full object-cover" style={f.style} />
+                <Image src={f.img} alt={f.name} width={180} height={180} sizes="180px" loading="lazy" className="w-full h-full object-cover" style={f.style} />
               </div>
               <h3 className="font-fraunces text-[1.2rem] font-bold text-blue-dark">{f.name}</h3>
               <p className="font-inter text-xs font-semibold tracking-[1.8px] uppercase text-blue-mid mb-[10px]">{f.role}</p>
