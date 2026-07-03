@@ -68,14 +68,14 @@ export default function PressWidget() {
             {!open && (
               <motion.button
                 onClick={() => setOpen(true)}
-                className="w-[56px] h-[56px] bg-transparent border-none cursor-pointer flex items-center justify-center p-0 animate-newsFloat hover:scale-110 hover:-translate-y-1 transition-transform"
+                className="w-[80px] h-[80px] bg-transparent border-none cursor-pointer flex items-center justify-center p-0 animate-newsFloat hover:scale-110 hover:-translate-y-1 transition-transform"
                 aria-label="Press Coverage"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 0.35, ease: [0.34, 1.56, 0.64, 1] }}
               >
-                <Image src="/newspaper.webp" alt="Press Coverage" width={56} height={56} sizes="56px" className="w-full h-full object-contain" />
+                <Image src="/newspaper.webp" alt="Press Coverage" width={80} height={80} sizes="80px" className="w-full h-full object-contain" />
               </motion.button>
             )}
           </AnimatePresence>

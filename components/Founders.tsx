@@ -9,7 +9,7 @@ const founders = [
     img: '/arshi.webp',
     desc: "Why just scroll weekends away? We dreamed of workshops where you create, unwind, and leave feeling inspired.",
     quote: '"Sometimes, the shortest pause energise you!"',
-    style: {},
+    style: { objectPosition: 'center 25%' },
   },
   {
     name: 'Vishakha Adtani',
