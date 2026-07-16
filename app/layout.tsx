@@ -30,7 +30,7 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  title: 'The Day Off Club — Slow Down. Learn. Connect. Give Back.',
+  title: 'The Day Off Club | Slow Down. Learn. Connect. Give Back.',
   description:
     'The Day Off Club curates intentional experiences that help you slow down, learn, connect, and give back — so your break feels productive, not guilty.',
   icons: {

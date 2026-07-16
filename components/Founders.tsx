@@ -48,15 +48,7 @@ export default function Founders() {
       >
         Meet the Founders
       </motion.h2>
-      <motion.p
-        className="font-inter text-base text-[#5a7fa8] mb-14 italic"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        From friends with an idea to founders with a vision.
-      </motion.p>
+
 
       <div className="flex justify-center gap-[60px] flex-wrap max-w-[900px] mx-auto relative z-10">
         {founders.map((f, i) => {
