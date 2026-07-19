@@ -70,7 +70,7 @@ export default function EnvelopeQuote() {
                 {/* Top fold line */}
                 <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[18px]" style={{ background: 'linear-gradient(90deg,#c8dff9,#90bef5,#c8dff9)' }} />
 
-                <button onClick={() => setOpen(false)} className="absolute top-3 right-[14px] bg-transparent border-none text-[1.1rem] text-blue-light hover:text-blue-DEFAULT hover:rotate-90 transition-all cursor-pointer leading-none">✕</button>
+                <button onClick={() => setOpen(false)} className="absolute top-3 right-[14px] bg-transparent border-none text-[1.1rem] text-blue-light hover:text-blue hover:rotate-90 transition-all cursor-pointer leading-none">✕</button>
 
                 <p className="font-raleway text-[0.62rem] font-bold tracking-[3px] uppercase text-blue-mid mb-4">✍ a note for you</p>
 
@@ -100,7 +100,7 @@ export default function EnvelopeQuote() {
                 </AnimatePresence>
 
                 <div className="flex items-center justify-between mt-5 pt-[14px] border-t border-[#e8f2fb]">
-                  <button onClick={next} className="font-inter text-[0.72rem] font-bold tracking-[0.8px] uppercase text-blue-DEFAULT bg-transparent border-none cursor-pointer p-0 hover:opacity-60 transition-opacity">
+                  <button onClick={next} className="font-inter text-[0.72rem] font-bold tracking-[0.8px] uppercase text-blue bg-transparent border-none cursor-pointer p-0 hover:opacity-60 transition-opacity">
                     another note →
                   </button>
                   <span className="text-base text-blue-light">♡</span>

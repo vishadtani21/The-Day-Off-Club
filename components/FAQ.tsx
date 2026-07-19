@@ -16,7 +16,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="bg-blue-hero py-10 sm:py-[70px] px-4 sm:px-10 max-w-[860px] mx-auto my-6 sm:my-10 rounded-2xl sm:rounded-[28px] text-center">
       <motion.h2
-        className="font-fraunces text-[2.2rem] sm:text-[3.2rem] font-bold text-blue-DEFAULT mb-6 sm:mb-9"
+        className="font-fraunces text-[2.2rem] sm:text-[3.2rem] font-bold text-blue mb-6 sm:mb-9"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

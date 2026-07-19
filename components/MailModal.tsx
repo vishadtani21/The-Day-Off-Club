@@ -53,7 +53,7 @@ export default function MailModal({ open, onClose }: { open: boolean; onClose: (
               </svg>
             </div>
 
-            <button onClick={onClose} className="absolute top-[18px] right-5 bg-transparent border-none text-[1.4rem] text-[#c4b8ae] hover:text-blue-DEFAULT hover:rotate-90 transition-all cursor-pointer leading-none">×</button>
+            <button onClick={onClose} className="absolute top-[18px] right-5 bg-transparent border-none text-[1.4rem] text-[#c4b8ae] hover:text-blue hover:rotate-90 transition-all cursor-pointer leading-none">×</button>
 
             <div className="mb-6">
               <h3 className="font-fraunces text-[2rem] font-bold text-[#24180d] leading-[1.2] mb-1.5">Drop us a <em className="italic font-normal text-blue-mid">note!</em></h3>
@@ -76,11 +76,11 @@ export default function MailModal({ open, onClose }: { open: boolean; onClose: (
                 className="border border-[#e8e0d8] rounded-md px-3 py-[9px] font-inter text-[0.88rem] text-[#3a2512] bg-[#fdfcfa] outline-none focus:border-blue-mid focus:shadow-[0_0_0_3px_rgba(123,90,58,0.10)] transition-all resize-none placeholder-[#c8bcb3]" />
             </div>
 
-            <div className="flex items-center justify-between gap-3 mt-[18px] pt-[14px] border-t border-dashed border-[#e8e0d8]">
-              <span className="font-inter text-[0.75rem] text-[#b0a29a] italic truncate">to: the.dayoffclub@gmail.com</span>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-3 mt-[18px] pt-[14px] border-t border-dashed border-[#e8e0d8]">
+              <span className="font-inter text-[0.75rem] text-[#b0a29a] italic text-center sm:text-left w-full sm:w-auto">to: the.dayoffclub@gmail.com</span>
               <button onClick={send} disabled={status === 'sending' || status === 'sent'}
-                className={`flex-shrink-0 px-[22px] py-[10px] rounded-md font-raleway font-bold text-[0.82rem] tracking-[1px] uppercase text-white transition-all border-none cursor-pointer
-                  ${status === 'sent' ? 'bg-[#2e7d52]' : status === 'error' ? 'bg-[#b94040]' : 'bg-blue-DEFAULT'}`}>
+                className={`w-full sm:w-auto flex-shrink-0 px-[22px] py-[10px] rounded-md font-raleway font-bold text-[0.82rem] tracking-[1px] uppercase text-white transition-all border-none cursor-pointer
+                  ${status === 'sent' ? 'bg-[#2e7d52]' : status === 'error' ? 'bg-[#b94040]' : 'bg-blue'}`}>
                 {status === 'sending' ? 'Sending…' : status === 'sent' ? '✓ Sent!' : status === 'error' ? 'Failed — Retry' : 'Send →'}
               </button>
             </div>

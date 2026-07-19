@@ -62,7 +62,7 @@ export default function Founders() {
               <h3 className="font-fraunces text-[1.2rem] font-bold text-blue-dark">{f.name}</h3>
               <p className="font-inter text-xs font-semibold tracking-[1.8px] uppercase text-blue-mid mb-[10px]">{f.role}</p>
               <p className="font-inter text-[0.85rem] text-[#5a7fa8] leading-[1.65] text-center max-w-[220px] mb-[10px]">{f.desc}</p>
-              <p className="font-fraunces text-[0.95rem] italic text-blue-DEFAULT leading-[1.55] text-center max-w-[220px] border-t border-blue-light pt-3 mt-1">{f.quote}</p>
+              <p className="font-fraunces text-[0.95rem] italic text-blue leading-[1.55] text-center max-w-[220px] border-t border-blue-light pt-3 mt-1">{f.quote}</p>
             </motion.div>
           );
         })}

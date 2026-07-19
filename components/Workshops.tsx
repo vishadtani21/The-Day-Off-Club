@@ -9,6 +9,7 @@ const workshops = [
   { collab: true, title: 'Puppy Yoga × Aryodaya KIA', desc: 'An initiative by Aryodaya KIA — Puppy Yoga by The Day Off Club at Aryodaya KIA Showroom, Ghat Road. 7th June 2026.', reel: 'https://www.instagram.com/reel/DZUJ2pHzvs6/?igsh=angxcjVuMGw3Zmpo' },
   { collab: true, title: 'Project PAWsitivity × Sehej Foundation', desc: 'An MMA warm-up, followed by Puppy Yoga and Canvas Painting — in collaboration with The Sehej Foundation.', reel: 'https://www.instagram.com/reel/DWjIKi6MxQ2/?igsh=MXRxbnV5N3pkdTB4NQ==' },
   { collab: true, title: 'Pace, Paws & Plates', desc: 'The Day Off Club × Raftaar Run Club × Traders Cafe. An exclusive all-girls workshop — a 3K/5K run, Puppy Yoga, and Build Your Own Salad.', reel: 'https://www.instagram.com/reel/DZmM0L7tk2Q/?igsh=eDR5anUxM2Y1ZGNm' },
+  { title: 'Art & Icing', desc: 'People came, iced their own bento cakes, and took them home. Perfect Christmas vibes!', reel: 'https://www.instagram.com/reel/DSxcn__jJH2/?igsh=MW9ta2dibnJxeHo4YQ==' },
 ]
 
 export default function Workshops() {

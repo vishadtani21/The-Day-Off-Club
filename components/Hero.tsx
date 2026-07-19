@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}
         >
           <Image
-            src="/us.webp"
+            src="/hero_team.webp"
             alt="The Day Off Club team at a workshop event"
             width={800}
             height={1067}
