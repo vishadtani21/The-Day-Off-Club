@@ -32,9 +32,9 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 0.68, 0, 1.2] }}
         >
           <Image src="/logo.webp" alt="The Day Off Club" width={160} height={160} sizes="(max-width: 768px) 140px, 160px" className="mb-[10px] w-[140px] sm:w-[160px] h-auto object-contain mx-auto md:mx-0" priority />
-          <p className="font-raleway font-bold text-xs tracking-[3.5px] uppercase text-blue-mid mb-5">
+          <h1 className="font-raleway font-bold text-xs tracking-[3.5px] uppercase text-blue-mid mb-5">
             The Day Off Club
-          </p>
+          </h1>
           <p className="font-fraunces text-[1.6rem] sm:text-[2.1rem] leading-[1.4] text-blue-dark mb-3">
             We curate intentional experiences that help you slow down, learn, connect, and give back —
           </p>
@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}
         >
           <Image
-            src="/hero_team.webp"
+            src="/us.png"
             alt="The Day Off Club team"
             width={400}
             height={533}

@@ -32,13 +32,6 @@ const founders = [
 export default function Founders() {
   return (
     <section className="relative bg-off-white py-10 sm:py-[90px] px-4 sm:px-10 text-center overflow-hidden">
-      <motion.p
-        className="text-[1.1rem] text-blue-mid mb-4 tracking-[2px]"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      />
       <motion.h2
         className="font-fraunces text-[2.2rem] sm:text-[3.2rem] font-bold text-blue-dark leading-[1.15] mb-3"
         initial={{ opacity: 0, y: 24 }}

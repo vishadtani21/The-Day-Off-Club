@@ -31,7 +31,7 @@ export default function InstagramCTA() {
           <motion.a
             href="https://instagram.com/the.dayoffclub"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="inline-block bg-blue-light text-blue-dark px-9 py-[14px] rounded-full font-inter font-bold text-[0.9rem] tracking-[1.5px] uppercase hover:bg-white hover:-translate-y-0.5 transition-all"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}

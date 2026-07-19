@@ -1,12 +1,12 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://thedayoffclub.in",
+      url: 'https://www.thedayoffclub.in',
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: 'weekly',
       priority: 1,
     },
-  ];
+  ]
 }

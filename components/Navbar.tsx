@@ -54,7 +54,7 @@ export default function Navbar() {
 
         <a
           href="https://chat.whatsapp.com/E6EpNtevkj3HSSCc88NfUd"
-          target="_blank" rel="noopener"
+          target="_blank" rel="noopener noreferrer"
           className="hidden md:inline-block bg-blue text-white px-[22px] py-[9px] rounded-full font-raleway font-bold text-xs tracking-[1.5px] uppercase hover:bg-blue-dark hover:-translate-y-0.5 transition-all"
         >
           Join WhatsApp Community
@@ -89,7 +89,7 @@ export default function Navbar() {
             ))}
             <a
               href="https://chat.whatsapp.com/E6EpNtevkj3HSSCc88NfUd"
-              target="_blank" rel="noopener"
+              target="_blank" rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="bg-blue text-white px-5 py-[10px] rounded-full text-center font-bold"
             >

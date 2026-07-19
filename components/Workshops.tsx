@@ -45,9 +45,8 @@ export default function Workshops() {
               )}
               <h3 className="font-fraunces text-[1.15rem] font-bold text-blue-dark mb-2">{w.title}</h3>
               <p className="text-[0.82rem] text-[#2e5a8a] leading-[1.55] mb-2">{w.desc}</p>
-              <a href="#gallery" className="text-[0.78rem] text-blue block mt-2 hover:underline">See Photos →</a>
               <a
-                href={w.reel} target="_blank" rel="noopener"
+                href={w.reel} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 mt-1.5 text-[0.75rem] font-semibold text-red-600 hover:opacity-75 hover:translate-x-0.5 transition-all"
               >
                 Watch Highlights ▶
