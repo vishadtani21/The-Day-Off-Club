@@ -54,10 +54,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}
         >
           <Image
-            src="/us.png"
-            alt="The Day Off Club team"
-            width={400}
-            height={533}
+            src="/us.webp"
+            alt="The Day Off Club team at a workshop event"
+            width={800}
+            height={1067}
             sizes="(max-width: 768px) 100vw, 400px"
             className="w-full rounded-[20px] border-[5px] border-white object-cover object-top"
             style={{ boxShadow: '0 12px 40px rgba(43,95,143,0.20), 0 0 0 2px #90bef5' }}

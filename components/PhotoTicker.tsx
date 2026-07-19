@@ -48,6 +48,7 @@ export default function PhotoTicker() {
               alt="Event photo"
               fill
               sizes="165px"
+              quality={70}
               loading="lazy"
               className="object-cover hover:saturate-110 transition-all duration-350"
             />

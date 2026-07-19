@@ -18,7 +18,7 @@
 
   /* ── Animations ── */
   --animate-ticker:       ticker 22s linear infinite;
-  --animate-photo-ticker: photoTicker 50s linear infinite;
+  --animate-photo-ticker: photoTicker 75s linear infinite;
   --animate-env-pulse:    envPulse 2s ease-in-out infinite;
   --animate-env-bob:      envBob 3.5s ease-in-out infinite;
   --animate-news-float:   newsFloat 3.5s ease-in-out infinite;
@@ -73,8 +73,8 @@ body {
 }
 
 /* ── Ticker animations ── */
-.ticker-track       { animation: ticker       22s linear infinite; }
-.photo-ticker-track { animation: photoTicker  30s linear infinite; }
+.ticker-track       { animation: ticker      22s linear infinite; will-change: transform; }
+.photo-ticker-track { animation: photoTicker 75s linear infinite; will-change: transform; }
 
 /* ── Postage stamp serrated mask (MailModal) ── */
 .stamp-mask {
