@@ -37,7 +37,7 @@ export default function MailModal({ open, onClose }: { open: boolean; onClose: (
           onClick={e => { if (e.target === e.currentTarget) onClose() }}
         >
           <motion.div
-            className="bg-white w-full max-w-[460px] relative px-9 py-[52px] rounded-sm stamp-mask"
+            className="bg-white w-full max-w-[460px] relative px-9 pt-[52px] pb-[72px] rounded-sm stamp-mask"
             style={{ boxShadow: '0 24px 64px rgba(58,37,18,0.18)' }}
             initial={{ y: 32, scale: 0.96, rotate: -1 }}
             animate={{ y: 0, scale: 1, rotate: 0 }}

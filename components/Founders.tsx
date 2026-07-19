@@ -6,7 +6,7 @@ const founders = [
   {
     name: 'Arshpreet Puri',
     role: 'Co-Founder',
-    img: '/arshi.webp',
+    img: '/arshi.jpeg',
     desc: "Why just scroll weekends away? We dreamed of workshops where you create, unwind, and leave feeling inspired.",
     quote: '"Sometimes, the shortest pause energise you!"',
     style: { objectPosition: 'center 25%' },

@@ -18,7 +18,7 @@
 
   /* ── Animations ── */
   --animate-ticker:       ticker 22s linear infinite;
-  --animate-photo-ticker: photoTicker 30s linear infinite;
+  --animate-photo-ticker: photoTicker 50s linear infinite;
   --animate-env-pulse:    envPulse 2s ease-in-out infinite;
   --animate-env-bob:      envBob 3.5s ease-in-out infinite;
   --animate-news-float:   newsFloat 3.5s ease-in-out infinite;
