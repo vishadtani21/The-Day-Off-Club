@@ -27,9 +27,6 @@ const photos = [
   'WhatsApp Image 2026-07-20 at 12.51.45 AM (1).jpeg',
   'WhatsApp Image 2026-07-20 at 12.51.46 AM.jpeg',
   'WhatsApp Image 2026-07-20 at 12.52.06 AM.jpeg',
-  'WhatsApp Image 2026-05-22 at 11.16.07 AM.webp',
-  'WhatsApp Image 2026-05-22 at 11.16.07 AM (1).webp',
-  'WhatsApp Image 2026-05-22 at 11.16.07 AM (2).webp',
 ]
 
 export default function PhotoTicker() {
