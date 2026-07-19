@@ -45,7 +45,7 @@ export default function PressWidget() {
               >
                 <button onClick={() => setOpen(false)} className="absolute top-[14px] right-4 bg-transparent border-none text-[1.3rem] text-[#a39587] hover:text-[#3a2512] hover:rotate-90 transition-all cursor-pointer leading-none">×</button>
                 <div className="flex flex-col items-center text-center mb-3 pt-1.5">
-                  <Image src="/toi.avif" alt="Times of India" width={80} height={24} className="h-6 w-auto object-contain mb-1.5" />
+                  <Image src="/toi.png" alt="Times of India" width={80} height={24} className="h-6 w-auto object-contain mb-1.5" />
                   <div className="font-raleway text-[0.62rem] font-bold tracking-[2px] text-[#8c7e70] uppercase">The Times of India · Featured</div>
                 </div>
                 <hr className="border-t-[3px] border-double border-[#3a2512] mb-4" />
@@ -75,7 +75,7 @@ export default function PressWidget() {
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 0.35, ease: [0.34, 1.56, 0.64, 1] }}
               >
-                <Image src="/newspaper.webp" alt="Press Coverage" width={80} height={80} sizes="80px" className="w-full h-full object-contain" />
+                <Image src="/newspaper.png" alt="Press Coverage" width={80} height={80} sizes="80px" className="w-full h-full object-contain" />
               </motion.button>
             )}
           </AnimatePresence>

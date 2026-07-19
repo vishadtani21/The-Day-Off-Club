@@ -80,7 +80,7 @@ export default function MailModal({ open, onClose }: { open: boolean; onClose: (
               <span className="font-inter text-[0.75rem] text-[#b0a29a] italic truncate">to: the.dayoffclub@gmail.com</span>
               <button onClick={send} disabled={status === 'sending' || status === 'sent'}
                 className={`flex-shrink-0 px-[22px] py-[10px] rounded-md font-raleway font-bold text-[0.82rem] tracking-[1px] uppercase text-white transition-all border-none cursor-pointer
-                  ${status === 'sent' ? 'bg-[#2e7d52]' : status === 'error' ? 'bg-[#b94040]' : 'bg-blue-DEFAULT hover:bg-blue-dark hover:-translate-y-0.5'}`}>
+                  ${status === 'sent' ? 'bg-[#2e7d52]' : status === 'error' ? 'bg-[#b94040]' : 'bg-blue-DEFAULT'}`}>
                 {status === 'sending' ? 'Sending…' : status === 'sent' ? '✓ Sent!' : status === 'error' ? 'Failed — Retry' : 'Send →'}
               </button>
             </div>
